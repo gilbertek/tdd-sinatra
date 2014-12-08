@@ -1,6 +1,6 @@
 require "spec_helper"
 
-Rspec.describe TodoApi do
+RSpec.describe TodoApi do
 	def app
 		TodoApi # This defines the active appliocation for the test
 	end
@@ -33,7 +33,7 @@ Rspec.describe TodoApi do
 
 	describe "POST todo" do
 		it "returns status 200" do
-			post "/" :todo => "Hello spec"
+			post "/", :todo => "Hello spec"
 
 			expect(last_response.status).to eq 200
 		end
